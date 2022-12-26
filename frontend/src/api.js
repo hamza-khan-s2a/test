@@ -12,12 +12,12 @@ export const getProduct = async (id) => {
         'content-type': 'application/json',
       },
     })
-    if (response.statusText === '' || response.statusText !== 'OK') {
-      console.log(response);
-      console.log("statusText");
+    // if (response.statusText === '' || response.statusText !== 'OK') {
+    //   console.log(response);
+    //   console.log("statusText");
 
-      throw new Error(response.data.message)
-    }
+    //   throw new Error(response.data.message)
+    // }
     console.log(response);
     console.log("success");
 
