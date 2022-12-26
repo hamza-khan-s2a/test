@@ -12,7 +12,7 @@ export const getProduct = async (id) => {
         'content-type': 'application/json',
       },
     })
-    if (response.statusText !== 'OK') {
+    if (response.statusText === '' || response.statusText !== 'OK') {
       console.log(response);
       console.log("statusText");
 
