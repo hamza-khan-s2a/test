@@ -13,10 +13,13 @@ export const getProduct = async (id) => {
       },
     })
     if (response.statusText !== 'OK') {
+      console.log(response);
       throw new Error(response.data.message)
     }
+    console.log(response);
     return response.data
   } catch (err) {
+    console.log(response);
     console.error(err)
     return { error: err.response.data.message || err.message }
   }
