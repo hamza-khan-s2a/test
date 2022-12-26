@@ -14,12 +14,17 @@ export const getProduct = async (id) => {
     })
     if (response.statusText !== 'OK') {
       console.log(response);
+      console.log("statusText");
+
       throw new Error(response.data.message)
     }
     console.log(response);
+    console.log("success");
+
     return response.data
   } catch (err) {
     console.log(response);
+    console.log("catch");
     console.error(err)
     return { error: err.response.data.message || err.message }
   }
