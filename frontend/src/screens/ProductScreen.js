@@ -13,6 +13,7 @@ const ProductScreen = {
     const request = parseRequestUrl()
     showLoading()
     const product = await getProduct(request.id)
+    console.log(product);
     if (product.error) {
       return `<div>${product.error}</div>`
     }

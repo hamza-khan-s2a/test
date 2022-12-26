@@ -12,7 +12,9 @@ const HomeScreen = {
     });
     const products = response.data;
     hideLoading()
-
+    // if (!response || response.statusText !== 'OK') {
+    //   return '<div> Error in Getting Desired Data </div>';
+    // }
     console.log(response);
     console.log(products);
     return `
