@@ -76,9 +76,10 @@ export const update = async (name, email, password) => {
         password
       }
     })
-    if (response.statusText !== 'OK') {
-      throw new Error(response.data.message)
-    }
+
+    // if (response.statusText !== 'OK') {
+    //   throw new Error(response.data.message)
+    // }
     return response.data
   } catch (err) {
     console.error(err)
@@ -99,10 +100,9 @@ export const createOrder = async (order) => {
       },
       data: order,
     })
-    debugger
-    if ((response.statusText !== "Created")) {
-      throw new Error(response.data.message)
-    }
+    // if ((response.statusText !== "Created")) {
+    //   throw new Error(response.data.message)
+    // }
 
     return response.data
   } catch (err) {
@@ -123,9 +123,9 @@ export const getMyOrders = async () => {
       },
     });
 
-    if (response.statusText !== 'OK') {
-      throw new Error(response.data.message);
-    }
+    // if (response.statusText !== 'OK') {
+    //   throw new Error(response.data.message);
+    // }
     return response.data;
   } catch (err) {
     return err.response ? err.response.data.message : err.message;
@@ -143,9 +143,9 @@ export const getOrder = async (id) => {
         Authorization: `Bearer ${token}`,
       },
     })
-    if (response.statusText !== 'OK') {
-      throw new Error(response.data.message)
-    }
+    // if (response.statusText !== 'OK') {
+    //   throw new Error(response.data.message)
+    // }
     return response.data
 
   } catch (err) {
@@ -181,9 +181,9 @@ export const addInventory = async (inventory) => {
 
     })
     console.log(_image);
-    if ((response.statusText !== "OK")) {
-      throw new Error(response.data.message)
-    }
+    // if ((response.statusText !== "OK")) {
+    //   throw new Error(response.data.message)
+    // }
     return {
       data: response.data,
       message: "Product Added in Inventory"
