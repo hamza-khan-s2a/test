@@ -48,17 +48,13 @@ userRouter.post('/register', async (req, res) => {
     email: req.body.email,
     password: req.body.password
   })
-  console.log(user);
   const createUser = await user.save()
-  console.log(createUser);
 
   if (!createUser) {
-    console.log("error");
     res.status(401).send({
       message: "InValid User Data"
     })
   } else {
-    console.log("no error");
     res.send({
 
       id: createUser.id,

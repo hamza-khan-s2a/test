@@ -13,18 +13,12 @@ export const getProduct = async (id) => {
       },
     })
     // if (response.statusText === '' || response.statusText !== 'OK') {
-    //   console.log(response);
-    //   console.log("statusText");
-
     //   throw new Error(response.data.message)
     // }
     console.log(response);
-    console.log("success");
 
     return response.data
   } catch (err) {
-    console.log(response);
-    console.log("catch");
     console.error(err)
     return { error: err.response.data.message || err.message }
   }
@@ -122,7 +116,7 @@ export const getMyOrders = async () => {
         Authorization: `Bearer ${token}`,
       },
     });
-
+    console.log(response);
     // if (response.statusText !== 'OK') {
     //   throw new Error(response.data.message);
     // }
@@ -180,7 +174,6 @@ export const addInventory = async (inventory) => {
       },
 
     })
-    console.log(_image);
     // if ((response.statusText !== "OK")) {
     //   throw new Error(response.data.message)
     // }
