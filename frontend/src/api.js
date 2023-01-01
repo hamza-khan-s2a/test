@@ -116,7 +116,6 @@ export const getMyOrders = async () => {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(response);
     // if (response.statusText !== 'OK') {
     //   throw new Error(response.data.message);
     // }

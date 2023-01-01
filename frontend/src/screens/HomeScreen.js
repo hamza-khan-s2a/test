@@ -15,8 +15,7 @@ const HomeScreen = {
     // if (!response || response.statusText !== 'OK') {
     //   return '<div> Error in Getting Desired Data </div>';
     // }
-    console.log(response);
-    console.log(products);
+
     return `
         <ul class="products">
             ${products.map(
