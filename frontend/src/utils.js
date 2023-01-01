@@ -14,7 +14,6 @@ export const parseRequestUrl = () => {
 export const rerender = async (component) => {
     document.querySelector('#main-container').innerHTML = await component.render();
     await component.after_render()
-    console.log("rerendering");
 
 }
 

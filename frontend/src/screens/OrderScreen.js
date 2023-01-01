@@ -22,7 +22,6 @@ const OrderScreen = {
       isPaid,
       paidAt,
     } = await getOrder(request.id)
-    console.log(request.id);
 
     return (`
     <div>

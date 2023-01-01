@@ -17,14 +17,12 @@ const addToCart = (item, forceUpdate = false) => {
   }
   setCartItems(cartItems)
   if (forceUpdate) {
-    console.log("hey");
     rerender(CartScreen)
   }
 };
 
 const removeFromCart = (id) => {
   setCartItems(getCartItems().filter(x => x.product !== id))
-  console.log(getCartItems());
   if (id === parseRequestUrl().id) {
     document.location.hash = '/cart'
   } else {
