@@ -54,7 +54,7 @@ const OrderScreen = {
             ${orderItems.map((item) => `
               <li>
                 <div class = 'cart-image'>
-                  <img src = '${item.image}' alt = '${item.name}' />
+                  <img src="./images/${item.image}" alt="${item.name}" />
                 </div>
                 <div class = 'cart-name'>
                   <a href = '/#/product/${item.product}'>${item.name}</a>
